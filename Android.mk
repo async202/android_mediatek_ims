@@ -4,8 +4,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-# Включает все Android.mk во всех подпапках
-include $(call all-makefiles-under,$(LOCAL_PATH))
+ifeq ($(TARGET_DEVICE),ims)
 
-# Сообщает системе Soong (которая обрабатывает .bp), что нужно искать модули здесь
-#$(call find-copy-subdir-files,*,$(LOCAL_PATH),$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay)
+endif

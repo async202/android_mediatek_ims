@@ -23,7 +23,7 @@ PRODUCT_COPY_FILES += \
     $(IMS_VNDR_PATH)/configs/permissions/mediatek-telephony-common.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/mediatek-telephony-common.xml
 
 # libui_shim
-PRODUCT_PACKAGE += \
+PRODUCT_PACKAGES += \
     libui_shim
 
 DEVICE_PACKAGE_OVERLAYS += \
@@ -33,3 +33,12 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     mtk-ims \
     mtk-ims-telephony
+
+PRODUCT_BOOT_JARS += \
+    mediatek-common \
+    mediatek-framework \
+    mediatek-ims-base \
+    mediatek-ims-common \
+    mediatek-telecom-common \
+    mediatek-telephony-base \
+    mediatek-telephony-common

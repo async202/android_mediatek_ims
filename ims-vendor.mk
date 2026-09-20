@@ -6,34 +6,26 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/mediatek/ims
 
 PRODUCT_COPY_FILES += \
-    vendor/mediatek/ims/proprietary/system_ext/etc/init/init.vtservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.vtservice.rc
+    vendor/mediatek/ims/proprietary/system/bin/vtservice:$(TARGET_COPY_OUT_SYSTEM)/bin/vtservice \
+    vendor/mediatek/ims/proprietary/system/etc/init/init.vtservice.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.vtservice.rc \
+    vendor/mediatek/ims/proprietary/system/lib/libcomutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcomutils.so \
+    vendor/mediatek/ims/proprietary/system/lib/libimsma.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libimsma.so \
+    vendor/mediatek/ims/proprietary/system/lib/libimsma_adapt.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libimsma_adapt.so \
+    vendor/mediatek/ims/proprietary/system/lib/libimsma_rtp.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libimsma_rtp.so \
+    vendor/mediatek/ims/proprietary/system/lib/libimsma_socketwrapper.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libimsma_socketwrapper.so \
+    vendor/mediatek/ims/proprietary/system/lib/libmtk_vt_service.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmtk_vt_service.so \
+    vendor/mediatek/ims/proprietary/system/lib/libmtk_vt_wrapper.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmtk_vt_wrapper.so \
+    vendor/mediatek/ims/proprietary/system/lib/libsink-mtk.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsink-mtk.so \
+    vendor/mediatek/ims/proprietary/system/lib/libsource.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsource.so \
+    vendor/mediatek/ims/proprietary/system/lib64/libmtk_vt_wrapper.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmtk_vt_wrapper.so \
 
 PRODUCT_PACKAGES += \
-    libcomutils \
-    libimsma \
-    libimsma_adapt \
-    libimsma_rtp \
-    libimsma_socketwrapper \
-    libmtk_vt_service \
-    libmtk_vt_wrapper \
-    libsignal \
-    libsink \
-    libsource \
-    libvcodec_cap \
-    libvcodec_capenc \
-    libvt_avsync \
-    vendor.mediatek.hardware.videotelephony@1.0 \
     ImsService \
-    MtkGbaService \
-    MtkTelephonyAssist \
+    mediatek-common \
+    mediatek-framework \
     mediatek-ims-base \
     mediatek-ims-common \
     mediatek-ims-extension-plugin \
     mediatek-telecom-common \
     mediatek-telephony-base \
-    mediatek-telephony-common \
-    mediatek-common \
-    mediatek-framework \
-    mediatek-ims-legacy \
-    mediatek-wfo-legacy \
-    vtservice
+    mediatek-telephony-common
